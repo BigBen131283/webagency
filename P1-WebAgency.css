@@ -1,0 +1,1155 @@
+/*Fonts*/
+
+@font-face
+{
+    font-family: 'roboto-black';
+    src: url('fonts/Roboto-Black.ttf') format('truetype');
+}
+
+@font-face 
+{
+    font-family: 'roboto-blackitalic';
+    src: url('fonts/Roboto-BlackItalic.ttf') format('truetype');
+}
+
+@font-face 
+{
+    font-family: 'roboto-bold';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face 
+{
+    font-family: 'roboto-bolditalic';
+    src: url('fonts/Roboto-BoldItalic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-italic';
+    src: url('fonts/Roboto-Italic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-light';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-lightitalic';
+    src: url('fonts/Roboto-LightItalic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-medium';
+    src: url('fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-mediumitalic';
+    src: url('fonts/Roboto-MediumItalic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-regular';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'roboto-thin';
+    src: url('fonts/Roboto-Thin.ttf') format('truetype');
+}
+
+/*Page*/
+
+body
+{
+    font-family: 'roboto-light', 'trebuchet-MS', sans-serif;
+    color: rgb(137, 143, 145);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+#bloc_page
+{
+    width: 100%;
+    margin-top: 89px;
+}
+
+section
+{
+    position: relative;
+}
+
+/*Menu*/
+
+#Menu
+{
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: white;
+    opacity: 1;
+}
+
+nav ul
+{
+    display: flex;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav li
+{
+    display: flex;
+    width: 70px;
+    height: 89px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: rgb(137, 143, 145);
+}
+
+nav li:hover
+{
+    border-top: solid 3px #5CADD3;
+    height: 86px;
+}
+
+/*Accueil*/
+/*slider tout en CSS avec image qui s'ajuste à la largeur de la fenêtre*/
+
+.slide
+{
+    position: relative;
+    padding-bottom: 34.375%;
+    height: 0;
+}
+
+.bg1
+{
+    background-image: url(images/slider/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.bg2
+{
+    background-image: url(images/slider/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.prez_
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 34.375%;
+    width: 40%;
+    position: absolute;
+    top: 150px;
+    left: 10%;
+}
+
+#slider
+{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 34.375%;
+    height: 0;
+}
+
+#slider .slide
+{
+    width: 100%;
+    height: 50%;
+}
+
+#container
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 200%;
+    transition: left 1s;
+}
+
+#container
+{
+    display: flex;
+}
+
+#slider:target #container
+{
+    left: -100%;
+}
+
+.slider_css
+{
+    position: relative;
+}
+
+.slider_css .left
+{
+    z-index: 2;
+    font-size: 1em;
+}
+
+.slider_css .circle_lft
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 35px 35px;
+    border-bottom-right-radius: 35px 35px;
+    width: 35px;
+    height: 70px;
+    top: 45%;
+    left: 0px;
+}
+
+.slider_css i
+{
+    color: #FFF;
+}
+
+.slider_css .right
+{
+    z-index: 2;
+    font-size: 1em;
+}
+
+.slider_css .circle_rgt
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 35px 35px;
+    border-bottom-left-radius: 35px 35px;
+    width: 35px;
+    height: 70px;
+    top: 45%;
+    right: 0px;
+}
+
+#accueil ul
+{
+    list-style-type: none;
+}
+
+/*mise en forme du texte*/
+
+#accueil h1
+{
+    font-family: 'roboto-black';
+    font-size: 2.4em;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.name
+{
+    color: #5CADD3;
+}
+
+#accueil p
+{
+    color: #FFF;
+    font-size: 1.1em;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'roboto-bold';
+}
+
+#accueil .btn_
+{
+    border: solid 1px #5CADD3;
+    background-color: #5CADD3;
+    border-bottom: 3px solid #468CAD;
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 1.2em;
+    font-family: 'roboto-bold';
+    width: 120px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+#accueil .btn_:hover
+{
+    font-size: 1.3em;
+    margin-top: 6px;
+}
+
+/*Services*/
+
+#Services
+{
+    position: absolute;
+    top: -70px;
+}
+
+/*style des icônes et séparateurs*/
+
+i
+{
+    font-size: 1.9em;
+    color: #5CADD3;
+}
+
+.cercle
+{
+    border: 2px solid #E7E7E7;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    position: relative;
+}
+
+.blue_pt
+{
+    border: 1px solid #5CADD3;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    background-color: #5CADD3;
+}
+
+.wht_pt
+{
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    background-color: #FFF;
+}
+
+.cercle .blue_pt
+{
+    position: absolute;
+    right: -7px;
+}
+
+.separateur
+{
+    width: 161px;
+    border-bottom: 1px solid #E7E7E7;
+    position: relative;
+}
+
+.separateur .blue_pt
+{
+    position: absolute;
+    left: 75px;
+    bottom: -7px;
+}
+
+.separateur .wht_pt
+{
+    position: absolute;
+    left: 72px;
+    bottom: -10px;
+}
+
+/*Placements*/
+
+.prez
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.prez h1
+{
+    font-size: 3em;
+    font-family: 'roboto-black';
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.prez p
+{
+    text-align: center;
+    width: 50%;
+}
+
+.corpus
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.corpus .apple
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpus ul
+{
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.corpus li
+{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.desc
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 85%;
+    height: 64px;
+    text-align: left;
+}
+
+.desc h2
+{
+    font-size: 1.2em;
+    font-family: 'roboto-bold';
+    color: #000;
+    margin-bottom: 2px;/*jouer avec les marges*/
+}
+
+.desc p
+{
+    margin-top: 0;
+}
+
+/*Projets*/
+
+/*Placement et effets*/
+
+#Projets
+{
+    position: absolute;
+    top: -70px;
+}
+
+.projets
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: #F5F5F5;
+}
+
+/*Propriétés des boutons de navigation*/
+
+.nav-proj
+{
+    display: flex;
+    width: 30%;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 14px;
+    overflow: hidden;
+}
+
+#lft
+{
+    width: 100%;
+}
+
+#rgt
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.boutons
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.btn
+{
+    width: 25%;
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.btn i
+{
+    position: absolute;
+    bottom: -13px;
+    font-size: 1.3em;
+    color: #F5F5F5;
+}
+
+.btn a
+{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*modifier la couleur au :hover*/
+
+.btn:hover
+{
+    height: 36px;
+    background-color: #5CADD3;
+    border-bottom: 4px solid #468CAD;
+}
+
+.btn:hover a
+{
+    color: #FFF;
+}
+
+.btn:hover i
+{
+    color: #468CAD;
+}
+
+#c_lft:target .btn1:hover, #c_rgt:target .btn1:hover, #rgt:target .btn1:hover
+{
+    height: 36px;
+    background-color: #5CADD3;
+    border-bottom: 4px solid #468CAD;
+}
+
+#c_lft:target .btn1:hover a, #c_rgt:target .btn1:hover a, #rgt:target .btn1:hover a
+{
+    color: #FFF;
+}
+
+#c_lft:target .btn1:hover i, #c_rgt:target .btn1:hover i, #rgt:target .btn1:hover i
+{
+    color: #468CAD;
+}
+
+/*All Works par défaut en bleu*/
+.btn1
+{
+    height: 36px;
+    background-color: #5CADD3;
+    border-bottom: 4px solid #468CAD;
+}
+
+.btn1 a
+{
+    color: #FFF;
+}
+
+.btn1 i
+{
+    color: #468CAD;
+}
+
+/*Modification des boutons au target*/
+#c_lft:target .btn2, #c_rgt:target .btn3, #rgt:target .btn4
+{
+    height: 36px;
+    background-color: #5CADD3;
+    border-bottom: 4px solid #468CAD;
+}
+
+#c_lft:target .btn2 a, #c_rgt:target .btn3 a, #rgt:target .btn4 a
+{
+    color: #FFF;
+}
+
+#c_lft:target .btn2 i, #c_rgt:target .btn3 i, #rgt:target .btn4 i
+{
+    color: #468CAD;
+}
+
+/*Désélectionner All Works quand l'un des 3 autres boutons est sélectionné*/
+
+#c_lft:target .btn1, #c_rgt:target .btn1, #rgt:target .btn1
+{
+    height: 100%;
+    background-color: #E5E5E5;
+    border-bottom: none;
+}
+
+#c_lft:target .btn1 a, #c_rgt:target .btn1 a, #rgt:target .btn1 a
+{
+    color: #000;
+}
+
+#c_lft:target .btn1 i, #c_rgt:target .btn1 i, #rgt:target .btn1 i
+{
+    color: #F5F5F5;
+}
+
+/*Porfolio avec des images responsives et un affichage sélectif selon le bouton sélectionné*/
+
+/*Portfolio en responsive*/
+
+.portfolio
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.portfolio .proj
+{
+    width: 20%;
+    min-width: 300px;
+    max-width: 600px;
+    max-height: 400px;
+    min-height: 200px;
+    margin: 1%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.proj img
+{
+    width: 100%;
+}
+
+/*Descrition par translation au :hover*/
+
+.volet
+{
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.volet p
+{
+    margin: 0;
+}
+
+.volet h2
+{
+    margin-bottom: 0;
+    margin-top: 1%;
+}
+
+.proj:hover .volet
+{
+    left: 0;
+    transition: left .7s;
+}
+
+.eye
+{
+    position: relative;
+    color: #FFF;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+
+.eye h2
+{
+    font-size: 1.2em;
+    font-family: 'roboto-medium';
+}
+
+.eye p
+{
+    font-size: 1em;
+    font-family: 'Roboto-Light';
+}
+
+.eye i
+{
+    position: absolute;
+    top: -27px;
+    right: 3%;
+    width: 49px;
+    height: 49px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    background-color: #5CADD3;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+/*Gestion de l'affichage en fonction du thème choisi*/
+
+#c_lft:target .thm2, #c_lft:target .thm3
+{
+    display: none;
+}
+
+#c_rgt:target .thm1, #c_rgt:target .thm3
+{
+    display: none;
+}
+
+#rgt:target .thm1, #rgt:target .thm2
+{
+    display: none;
+}
+
+/*Contact*/
+
+#contact
+{
+    position: absolute;
+    top: -70px;
+}
+
+#map
+{
+    position: relative;
+    color: #000;
+}
+
+iframe
+{
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+.calque
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(145, 207, 228, 0.4);
+    pointer-events: none;
+}
+
+
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#formulaire
+{
+    position: absolute;
+    top: 25px;
+    right: 10%;
+    width: 400px;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+form p
+{
+    margin-top: 0;
+}
+
+form h1
+{
+    color: #000;
+    font-family: 'roboto-black';
+}
+
+form h2
+{
+    margin-bottom: 0;
+    font-size: 1em;
+    color: #000;
+    font-family: 'roboto-bold';
+}
+
+form input
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form textarea
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form .btn
+{
+    width: 100px;
+    height: 30px;
+    background-color: #5CADD3;
+    color: white;
+    border: none;
+    border-bottom: 3px solid #468CAD;
+    padding-bottom: 5px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .btn:hover
+{
+    box-shadow: 3px 3px 3px #468CAD;
+    cursor: pointer;
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 1024px)
+{
+    /*Accueil*/
+    #accueil h1
+    {
+        font-size: 1.5em;
+    }
+    
+    /*Nos services*/
+    .corpus
+    {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    
+    .corpus ul
+    {
+        justify-content: space-around;
+    }
+
+    .desc
+    {
+        text-align: justify;
+        margin: 5px;
+    }
+
+    /*Nos projets*/
+    .eye i
+    {
+        right: 4%;
+        width: 43px;
+        height: 43px;
+        font-size: 1.5em;
+        top: -23px;
+    }
+
+    .volet h2
+    {
+        font-size: 1.2em;
+    }
+
+    .volet p
+    {
+        font-size: 0.9em;
+    }
+
+    .nav-proj
+    {
+        width: 40%;
+    }
+
+    /*Contacts*/
+
+    #formulaire
+    {
+        width: 100%;
+        position: initial;
+        background-color: #F5F5F5;
+    }
+
+    .calque
+    {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    /*Accueil*/
+    #accueil h1
+    {
+        font-size: 1em;
+    }
+
+    .prez_
+    {
+        top: 50%;
+    }
+
+    .slider_css .circle_lft
+    {
+        top: 38%;
+    }
+
+    .slider_css .circle_rgt
+    {
+        top: 38%;
+    }
+
+    /*Nos Services*/
+    .prez p
+    {
+        width: 60%;
+    }
+
+    .corpus
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corpus ul
+    {
+        padding-left: 0;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .corpus li
+    {
+        height: 90px;
+    }
+
+    .corpus .desc
+    {
+        width: 75%;
+    }
+
+    .corpus h2
+    {
+        margin-top: 0px;
+    }
+
+    /*Nos Projets*/
+    .nav-proj
+    {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 640px)
+{
+    /*Menu*/
+    #logo
+    {
+        margin-top: 80px;
+    }
+
+    header
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #Menu
+    {
+        position: initial;
+    }
+
+    #logo
+    {
+        padding-top: 5px;
+    }
+
+    #Menu ul
+    {
+        padding: 0;
+    }
+
+    nav
+    {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #FFF;
+    }
+
+    nav li
+    {
+        height: 50px;
+    }
+
+    nav li:hover
+    {
+        height: 47px;
+    }
+
+    /*Accueil*/
+    .prez_
+    {
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #F5F5F5;
+        width: 100%;
+    }
+
+    #accueil p
+    {
+        color: #000;
+        text-align: center;
+    }
+
+    #accueil h1
+    {
+        color: #000;
+        text-align: center;
+    }
+
+    .slider_css .circle_lft, .slider_css .circle_rgt
+    {
+        position: initial;
+        display: none;
+    }
+
+
+    /*Nos services*/
+    .corpus .apple
+    {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .apple img
+    {
+        width: 100%;
+    }
+
+    .prez p
+    {
+        text-align: justify;
+        width: 80%;
+    }
+
+    .prez h1
+    {
+        font-size: 2em;
+    }
+
+    /*Nos projets*/
+    .nav-proj
+    {
+        width: 100%;
+    }
+
+    .corpus ul
+    {
+        width: 80%;
+    }
+
+    .corpus li
+    {
+        flex-direction: column;
+        height: 150px;
+    }
+
+    .corpus .desc
+    {width: 100%;}
+
+    /*Contact*/
+    iframe
+    {
+        height: 400px;
+    }
+
+    .calque
+    {
+        height: 400px;
+    }
+
+}
